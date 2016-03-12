@@ -61,7 +61,7 @@ install_nginx() {
 	clean_yum
 	CENTOS_VERSION=$(less /etc/redhat-release)
 
-	if [[ $CENTOS_VERSION =~ "7" ]]; then
+	if [[ $CENTOS_VERSION =~ 7\. ]]; then
 		rpm -ivh $NGINX_PATH_7
 	else
 		rpm -ivh $NGINX_PATH_6
